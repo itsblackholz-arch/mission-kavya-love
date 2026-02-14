@@ -1,76 +1,96 @@
-<p>&lt;!DOCTYPE html&gt;</p>
-<p>&lt;html&gt;</p>
-<p>&lt;head&gt;</p>
-<p>&lt;title&gt;Mission Kavya&lt;/title&gt;</p>
-<p>&lt;style&gt;</p>
-<p>body{</p>
-<p>background:black;</p>
-<p>color:white;</p>
-<p>font-family:Arial;</p>
-<p>text-align:center;</p>
-<p>padding:40px;</p>
-<p>}</p>
-<p>.card{</p>
-<p>background:#111;</p>
-<p>padding:30px;</p>
-<p>border-radius:15px;</p>
-<p>max-width:600px;</p>
-<p>margin:auto;</p>
-<p>box-shadow:0 0 25px #00bfff;</p>
-<p>}</p>
-<p>button{</p>
-<p>padding:10px 20px;</p>
-<p>border:none;</p>
-<p>border-radius:8px;</p>
-<p>background:#00bfff;</p>
-<p>color:black;</p>
-<p>cursor:pointer;</p>
-<p>margin-top:15px;</p>
-<p>}</p>
-<p>#msg{</p>
-<p>display:none;</p>
-<p>margin-top:20px;</p>
-<p>}</p>
-<p>&lt;/style&gt;</p>
-<p>&lt;/head&gt;</p>
-<p>&lt;body&gt;</p>
-<p><br></p>
-<p>&lt;div class=&quot;card&quot;&gt;</p>
-<p>&lt;h1&gt;******* File: KAVYA 🚀&lt;/h1&gt;</p>
-<p>&lt;p&gt;Status: ******* for Launch&lt;/p&gt;</p>
-<p>&lt;p&gt;Role: Permanent Co-Pilot&lt;/p&gt;</p>
-<p>&lt;p&gt;Duration: Forever&lt;/p&gt;</p>
-<p><br></p>
-<p>&lt;p&gt;***** calculations, simulations and heart diagnostics&hellip;&nbsp;&nbsp;</p>
-<p>one result was confirmed:&lt;/p&gt;</p>
-<p><br></p>
-<p>&lt;h3&gt;My ******** is better with you in it.&lt;/h3&gt;</p>
-<p><br></p>
-<p>&lt;button onclick=&quot;launch()&quot;&gt;Initiate Launch&lt;/button&gt;</p>
-<p><br></p>
-<p>&lt;div id=&quot;msg&quot;&gt;</p>
-<p>&lt;p&gt;🚀 Launch Successful 🚀&lt;/p&gt;</p>
-<p>&lt;p&gt;Kavya, you are the gravity that ***** my world in orbit.&lt;/p&gt;</p>
-<p>&lt;p&gt;No matter how far rockets travel,&nbsp;&nbsp;</p>
-<p>my ******** destination will ****** be you.&lt;/p&gt;</p>
-<p>&lt;p&gt;&mdash; From **** Aerospace Engineer 💙&lt;/p&gt;</p>
-<p><br></p>
-<p>&lt;****** onclick=&quot;playSong()&quot;&gt;Play Mission Soundtrack 🎵&lt;/button&gt;</p>
-<p>&lt;/div&gt;</p>
-<p><br></p>
-<p>&lt;/div&gt;</p>
-<p><br></p>
-<p>&lt;script&gt;</p>
-<p>function launch(){</p>
-<p>document.getElementById(&quot;msg&quot;).style.display=&quot;block&quot;;</p>
-<p>}</p>
-<p><br></p>
-<p>function playSong(){</p>
-<p>window.open(&quot;https://www.youtube.com/watch?v=vGJTaP6anOU&quot;, &quot;_blank&quot;);</p>
-<p>}</p>
-<p>&lt;/script&gt;</p>
-<p><br></p>
-<p>&lt;/body&gt;</p>
-<p>&lt;/html&gt;</p>
-<p><br></p>
-<div style="color: red">Word to HTML trial - please <a href="https://wordtohtml.net/site/payment">Go PRO</a> to get whole HTML.</div>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mission Kavya 🚀</title>
+<style>
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:40px;
+overflow:hidden;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(white 1px, transparent 1px);
+background-size:20px 20px;
+animation:move 60s linear infinite;
+z-index:-1;
+}
+
+@keyframes move{
+from{background-position:0 0;}
+to{background-position:1000px 1000px;}
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:15px;
+max-width:600px;
+margin:auto;
+box-shadow:0 0 30px #00bfff;
+animation:fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:#00bfff;
+color:black;
+cursor:pointer;
+margin-top:20px;
+font-size:16px;
+}
+
+#msg{
+display:none;
+margin-top:25px;
+font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="card">
+<h1>🚀 Mission File: KAVYA</h1>
+<p>Status: Cleared for Launch</p>
+<p>Role: Permanent Co-Pilot</p>
+<p>Duration: Forever ♾️</p>
+
+<p>After several simulations and emotional calculations...</p>
+<h3>Conclusion: My universe feels right with you in it.</h3>
+
+<button onclick="launch()">Initiate Launch</button>
+
+<div id="msg">
+<h2>🚀 Launch Successful</h2>
+<p>Kavya, no matter how high I fly…  
+you’ll always be my favorite destination.</p>
+<p>— Your Aerospace Engineer 😎</p>
+</div>
+
+</div>
+
+<script>
+function launch(){
+document.getElementById("msg").style.display="block";
+}
+</script>
+
+</body>
+</html>
