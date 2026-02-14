@@ -2,14 +2,16 @@
 <html>
 <head>
 <title>Mission Kavya 🚀</title>
+
 <style>
 body{
+margin:0;
+padding:0;
 background:black;
 color:white;
-font-family:Arial;
-text-align:center;
-padding:40px;
+font-family: 'Courier New', monospace;
 overflow:hidden;
+text-align:center;
 }
 
 .stars{
@@ -17,23 +19,105 @@ position:fixed;
 width:100%;
 height:100%;
 background:radial-gradient(white 1px, transparent 1px);
-background-size:20px 20px;
-animation:move 60s linear infinite;
+background-size:3px 3px;
+animation:move 120s linear infinite;
 z-index:-1;
 }
 
 @keyframes move{
 from{background-position:0 0;}
-to{background-position:1000px 1000px;}
+to{background-position:2000px 2000px;}
 }
 
-.card{
-background:#111;
-padding:30px;
-border-radius:15px;
-max-width:600px;
-margin:auto;
-box-shadow:0 0 30px #00bfff;
+.container{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:90%;
+}
+
+h1{
+font-size:40px;
+letter-spacing:2px;
+}
+
+#countdown{
+font-size:50px;
+margin-top:20px;
+}
+
+#message{
+display:none;
+margin-top:30px;
+font-size:22px;
+line-height:1.6;
+animation:fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:#00bfff;
+color:black;
+cursor:pointer;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+
+<h1>MISSION: KAVYA 🚀</h1>
+<div id="countdown">Preparing Launch...</div>
+
+<div id="message">
+<p>Launch Successful 💫</p>
+<p>Kavya, after all system checks…</p>
+<p>I confirm one thing.</p>
+<p>My universe feels complete with you in it.</p>
+<p>No matter how far I go…</p>
+<p>You’ll always be my favorite destination. ♾️</p>
+
+<button onclick="playSong()">Play Our Song 🎵</button>
+</div>
+
+</div>
+
+<script>
+let count = 5;
+let countdown = document.getElementById("countdown");
+
+let timer = setInterval(function(){
+if(count > 0){
+countdown.innerHTML = "T - " + count;
+count--;
+}else{
+clearInterval(timer);
+countdown.innerHTML = "🚀 LIFTOFF";
+document.getElementById("message").style.display="block";
+}
+},1000);
+
+function playSong(){
+window.open("https://www.youtube.com/watch?v=vGJTaP6anOU","_blank");
+}
+</script>
+
+</body>
+</html>
 animation:fadeIn 2s ease-in-out;
 }
 
